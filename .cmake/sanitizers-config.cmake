@@ -1,0 +1,1 @@
+message(STATUS "sanitizers-config.cmake proceeded")

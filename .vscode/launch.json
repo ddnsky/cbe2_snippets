@@ -1,0 +1,80 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(debug) OpenGL",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [
+                "-render-hint=OpenGL",
+                "-_render-hint=Soft",
+                "-screen-width=1024",
+                "-screen-height=768",
+                //"-_first-screen=arc.*",
+                //"-first-screen=pathes1.*",
+                "-first-screen=pathes buggy.*",
+                //"-first-screen=round.*",
+                //"-include-screens=(tesselated.*)|(arc.*)|(lines.*)(elli.*)(pathes.*)",
+                //"-include-screens=(path.*)",
+                "-save-screenshots-path=~/Pictures/",
+                "-save-screenshots=0",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${command:cmake.launchTargetDirectory}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "$PATH:${command:cmake.launchTargetDirectory}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(debug) Screenshots",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [
+                "-render-hint=OpenGL",
+                "-render-hint=Soft",
+                "-screen-width=800",
+                "-screen-height=600",
+                //"-_first-screen=arc.*",
+                //"-first-screen=path.*",
+                //"-include-screens=(tesselated.*)|(arc.*)|(lines.*)(elli.*)(pathes.*)",
+                //"-include-screens=(path.*)",
+                "-save-screenshots-path=$HOME/Pictures/_screenshots",
+                "-save-screenshots=1",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${command:cmake.launchTargetDirectory}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "$PATH:${command:cmake.launchTargetDirectory}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+message(STATUS "mgt_ui-config.cmake proceeded")

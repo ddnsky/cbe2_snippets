@@ -1,0 +1,1 @@
+message(STATUS "mgt_cpl-config.cmake proceeded")
