@@ -20,7 +20,7 @@
                 //"-first-screen=stroke round.*",
                 //"-include-screens=(tesselated.*)|(arc.*)|(lines.*)(elli.*)(pathes.*)",
                 //"-include-screens=(path.*)",
-                "-include-screens=(arc.*)|(line.*)|(path.*)|(rotati.*)",
+                "-include-screens=(arc.*)|(path.*)|(rotati.*)|(stroke round.*)",
                 "-save-screenshots-path=$HOME/Pictures/_screenshot",
                 "-save-screenshots=0",
             ],
